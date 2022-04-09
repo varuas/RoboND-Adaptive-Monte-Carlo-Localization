@@ -39,4 +39,4 @@ Create the PGM map
     roslaunch pgm_map_creator request_publisher.launch
     
     Terminal 2:
-    src/pgm_map_creator/world/new_world.world
+    gzserver src/pgm_map_creator/world/new_world.world
