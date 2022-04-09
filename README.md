@@ -1,6 +1,6 @@
 # Adaptive Monte Carlo Localization using ROS and Gazebo
 
-This project utilizes the ROS AMCL package to accurately localize a mobile robot inside a map in a Gazebo simulation environment. The Robot has an RGB camera and a LIDAR sensor. 
+This project utilizes the ROS Adaptive Monte Carlo Localization (AMCL) package to accurately localize a mobile robot inside a map in a Gazebo simulation environment. The Robot has an RGB camera and a LIDAR sensor. AMCL dynamically adjusts the number of particles over a period of time, as the robot navigates around in a map. This adaptive process offers a significant computational advantage over MCL.
 
 Developed as part of the Robotics Software Engineer Nanodegree from Udacity.
 
