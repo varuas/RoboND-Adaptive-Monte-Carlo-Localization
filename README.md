@@ -30,3 +30,13 @@ Docker setup
     docker-compose exec ros bash (docker-compose up has to be running)
     apt install ros-kinetic-desktop-full
     source /opt/ros/kinetic/setup.bash
+    
+Create the PGM map
+
+ From the catkin_ws, run the following in separate terminals:
+
+    Terminal 1:
+    roslaunch pgm_map_creator request_publisher.launch
+    
+    Terminal 2:
+    src/pgm_map_creator/world/new_world.world
