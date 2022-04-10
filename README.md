@@ -1,7 +1,6 @@
 # Adaptive Monte Carlo Localization using ROS and Gazebo
 
-This project utilizes the ROS Adaptive Monte Carlo Localization (AMCL) package to accurately localize a mobile robot inside a map in a Gazebo simulation environment. The Robot has an RGB camera and a LIDAR sensor. AMCL dynamically adjusts the number of particles over a period of time, as the robot navigates around in a map. This adaptive process offers a significant computational advantage over MCL.
-
+This project utilizes the ROS Adaptive Monte Carlo Localization (AMCL) package to accurately localize a mobile robot inside a map in a Gazebo simulation environment. The Robot has an RGB camera and a LIDAR sensor. It utilizes odometry data on a simulated differential drive robot. AMCL dynamically adjusts the number of particles over a period of time, as the robot navigates around in a map. This adaptive process offers a significant computational advantage over MCL.
 Developed as part of the Robotics Software Engineer Nanodegree from Udacity.
 
 ### Technologies & tools used
@@ -30,10 +29,21 @@ Docker setup
     docker-compose exec ros bash (docker-compose up has to be running)
     apt install ros-kinetic-desktop-full
     source /opt/ros/kinetic/setup.bash
-    
-Create the PGM map
 
- From the catkin_ws, run the following in separate terminals:
+Launch
+
+    cd catkin_ws/
+    roslaunch my_robot world.launch
+    roslaunch my_robot amcl.launch
+
+
+Run Teleop node
+
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+
+(Optional) To re-create the PGM map
+From the catkin_ws, run the following in separate terminals:
 
     Terminal 1:
     roslaunch pgm_map_creator request_publisher.launch
