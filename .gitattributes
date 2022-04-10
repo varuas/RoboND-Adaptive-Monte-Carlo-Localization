@@ -1,0 +1,7 @@
+*.pgm filter=lfs diff=lfs merge=lfs -text
+**/*.pgm filter=lfs diff=lfs merge=lfs -text
+catkin_ws/**/*.pgm filter=lfs diff=lfs merge=lfs -text
+catkin_ws/src/my_robot/maps/map.pgm filter=lfs diff=lfs merge=lfs -text
+video_long.mov filter=lfs diff=lfs merge=lfs -text
+video_short.mp4 filter=lfs diff=lfs merge=lfs -text
+catkin_ws/src/pgm_map_creator/maps/*.pgm filter=lfs diff=lfs merge=lfs -text
